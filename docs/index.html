@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/vite-DcBtz0py.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Prettier(v2)
+      を利用して、英数字と日本語の間に半角スペースを入れるだけのツール
+    </title>
+    <script type="module" crossorigin src="/assets/index-CeJE3GUg.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Di-rJl3J.css">
+  </head>
+  <body>
+    <main>
+      <h2>
+        Prettier(v2)
+        を利用して、英数字と日本語の間に半角スペースを入れるだけのツール
+      </h2>
+
+      <details>
+        <summary style="width: 100%">使い方</summary>
+        <ol>
+          <li>整形対象のテキストを「入力欄」に入力してください。</li>
+          <li>
+            「整形後」に、英数字と日本語の間に半角スペースが入力されたテキストが展開されます。
+          </li>
+          <li>
+            「整形後」下部の「テキストをコピーする」ボタンから、整形後のテキストをクリップボードにコピーできます。
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary style="width: 100%">注意点</summary>
+        <ul>
+          <li>
+            Prettier(v2)
+            には、プレーンテキストに対するフォーマットができないようした。<br />代わりにマークダウンプラグインを利用して、フォーマットしてます。<br />なので、<strong
+              >マークダウン形式のテキストを入力すると、よしなに整形されちゃいます。</strong
+            >
+          </li>
+        </ul>
+      </details>
+
+      <hr />
+
+      <div>
+        <label for="input">入力欄:</label>
+        <textarea
+          id="input"
+          placeholder="整形対象のテキストをに入力してください。"
+        ></textarea>
+      </div>
+
+      <br />
+
+      <div>
+        <label for="output">整形後:</label>
+        <textarea
+          id="output"
+          placeholder="整形後のテキストがここに表示されます..."
+          readonly
+        ></textarea>
+        <div style="display: flex; gap: 16px; align-items: center">
+          <button
+            id="copy"
+            style="display: inline-flex; gap: 8px; align-items: center"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhGVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAGAAAAABAAAAYAAAAAEAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAAD+UvRpAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAAAqklEQVRIDWNgGDbg////4kA8D4jJAgQDAmjqOrJMhmoixgKwUoIKSVTARKJ6kpXjtADoHTEgngsNAVKopUDFehgugZkAkwDy18LEyKDPwsxhhDFAhoDYjEAAomF8INMXxCcBbAaphZmDM4hIMBCv0lEL8AYPSHI0iEZAELHA/AjLeTA+tWiapyKcDgWWRWdB5RGZ4ClOg2ESQIPtgPguGRa8BepJg5kz9GkA+3yRM+oLwWAAAAAASUVORK5CYII="
+              alt="テキストをコピーする"
+              width="16"
+              height="16"
+            />
+            <span>テキストをコピーする</span>
+          </button>
+          <span id="copied" style="opacity: 0">コピーしたよ！</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
