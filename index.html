@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Prettier(v2)
+      を利用して、英数字と日本語の間に半角スペースを入れるだけのツール
+    </title>
+  </head>
+  <body>
+    <main>
+      <h2>
+        Prettier(v2)
+        を利用して、英数字と日本語の間に半角スペースを入れるだけのツール
+      </h2>
+
+      <details>
+        <summary style="width: 100%">使い方</summary>
+        <ol>
+          <li>整形対象のテキストを「入力欄」に入力してください。</li>
+          <li>
+            「整形後」に、英数字と日本語の間に半角スペースが入力されたテキストが展開されます。
+          </li>
+          <li>
+            「整形後」下部の「テキストをコピーする」ボタンから、整形後のテキストをクリップボードにコピーできます。
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary style="width: 100%">注意点</summary>
+        <ul>
+          <li>
+            Prettier(v2)
+            には、プレーンテキストに対するフォーマットができないようした。<br />代わりにマークダウンプラグインを利用して、フォーマットしてます。<br />なので、<strong
+              >マークダウン形式のテキストを入力すると、よしなに整形されちゃいます。</strong
+            >
+          </li>
+        </ul>
+      </details>
+
+      <hr />
+
+      <div>
+        <label for="input">入力欄:</label>
+        <textarea
+          id="input"
+          placeholder="整形対象のテキストをに入力してください。"
+        ></textarea>
+      </div>
+
+      <br />
+
+      <div>
+        <label for="output">整形後:</label>
+        <textarea
+          id="output"
+          placeholder="整形後のテキストがここに表示されます..."
+          readonly
+        ></textarea>
+        <div style="display: flex; gap: 16px; align-items: center">
+          <button
+            id="copy"
+            style="display: inline-flex; gap: 8px; align-items: center"
+          >
+            <img
+              src="/public/icon_copy_white.png"
+              alt="テキストをコピーする"
+              width="16"
+              height="16"
+            />
+            <span>テキストをコピーする</span>
+          </button>
+          <span id="copied" style="opacity: 0">コピーしたよ！</span>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

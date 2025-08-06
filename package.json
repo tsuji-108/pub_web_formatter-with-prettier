@@ -1,0 +1,20 @@
+{
+  "name": "pub_web_formatter-with-prettier",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write 'src/**/*.{js,ts,jsx,tsx,json}'"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.7.3",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "prettier": "^2.8.8",
+    "water.css": "^2.1.1"
+  }
+}
